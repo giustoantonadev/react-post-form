@@ -23,7 +23,7 @@ export default function FormPost() {
         <form className="row g-3" onSubmit={handleSubmit}>
 
             <div className="col-md-4">
-                <label for="validationDefault01" className="form-label">Author</label>
+                <label className="form-label">Author</label>
                 <input
                     type="text"
                     onChange={e => setFormData({ ...formData, 'author': e.target.value })}
@@ -33,7 +33,7 @@ export default function FormPost() {
             </div>
 
             <div className="col-md-4">
-                <label for="validationDefault02" className="form-label">Title</label>
+                <label className="form-label">Title</label>
                 <input
                     type="text"
                     onChange={e => setFormData({ ...formData, 'title': e.target.value })}
@@ -45,7 +45,7 @@ export default function FormPost() {
             </div>
 
             <div className="col-md-4">
-                <label for="validationDefault02" className="form-label">Body</label>
+                <label className="form-label">Body</label>
                 <textarea
                     type="text"
                     onChange={e => setFormData({ ...formData, 'body': e.target.value })}
@@ -65,7 +65,7 @@ export default function FormPost() {
                         id="invalidCheck2"
                         onChange={() => setFormData({ ...formData, 'public': !formData.public })}
                         required />
-                    <label className="form-check-label" for="invalidCheck2">
+                    <label className="form-check-label">
                         Public
                     </label>
                 </div>
