@@ -1,4 +1,7 @@
 import { useState } from "react";
+import axios from "axios";
+
+
 
 export default function FormPost() {
 
@@ -12,9 +15,16 @@ export default function FormPost() {
 
     console.log(formData);
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault()
         console.log(formData)
+        axios({
+            method: "post",
+            url: "https://67c5b4f3351c081993fb1ab6.mockapi.io/api/posts",
+            data: formData
+        });
+
+
     }
 
 
